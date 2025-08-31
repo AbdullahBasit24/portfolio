@@ -50,7 +50,7 @@
             animation: wave 15s linear reverse infinite; /* Reverse direction */
             opacity: 0.6; /* Increased opacity */
             bottom: 3em; /* Adjusted position */
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgba(255, 221, 0, 0.3)"></path></svg>');
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="rgana(255, 221, 0, 0.3)"></path></svg>');
         }
         
         .wave:nth-child(3) {
@@ -411,6 +411,82 @@
             font-size: 1.3rem;
             margin-bottom: 10px;
             color: #fff;
+        }
+        
+        /* Certifications Section */
+        .certifications-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .certification-card {
+            background: rgba(30, 30, 30, 0.8);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 204, 0, 0.3);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .certification-card.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .certification-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255, 204, 0, 0.1);
+        }
+        
+        .certification-card h3 {
+            font-size: 1.4rem;
+            color: #ffcc00;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .certification-card h3 i {
+            margin-right: 10px;
+        }
+        
+        .certification-card .issuer {
+            font-size: 1.1rem;
+            color: #ffcc00;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .certification-card .date {
+            color: #aaa;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .certification-card .credential {
+            color: #ddd;
+            margin-bottom: 20px;
+            font-family: monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            align-self: flex-start;
+        }
+        
+        .certification-card .btn {
+            align-self: flex-start;
+            margin: 0;
+            padding: 10px 20px;
+            font-size: 0.9rem;
         }
         
         /* Projects section */
@@ -799,6 +875,10 @@
             .nav-links li:first-child {
                 margin-top: 0;
             }
+
+            .certifications-container {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
@@ -866,6 +946,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#interests">Interests</a></li>
@@ -926,6 +1007,7 @@
                         <div class="timeline-year">2023-2027</div>
                         <h3 class="timeline-title">Bachelor of Science in Computer Engineering</h3>
                         <p>Information Technology University of the Punjab (ITU Punjab)</p>
+                        <br>
                         <p>Relevant Coursework: Computer Organization & Architecture, Data Structures & Algorithms, Microcontrollers & Interfacing, Computer Aided Design</p>
                     </div>
                 </div>
@@ -944,6 +1026,24 @@
                         <h3 class="timeline-title">Matric</h3>
                         <p>Unique Group of Institutions</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Licenses & Certifications</h2>
+            <div class="certifications-container">
+                <div class="certification-card">
+                    <h3><i class="fas fa-certificate"></i> AI For Everyone</h3>
+                    <p class="issuer">DeepLearning.AI</p>
+                    <p class="date">Issued Aug 2025</p>
+                    <p class="credential">Credential ID MEPJYKQYB6OQ</p>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/MEPJYKQYB6OQ" class="btn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Verify Credential
+                    </a>
                 </div>
             </div>
         </div>
@@ -1159,6 +1259,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#interests">Interests</a></li>
@@ -1204,6 +1305,7 @@
         const interestCards = document.querySelectorAll('.interest-card');
         const contactItems = document.querySelectorAll('.contact-item');
         const contactForm = document.querySelector('.contact-form');
+        const certificationCards = document.querySelectorAll('.certification-card');
         
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -1220,6 +1322,11 @@
         
         // Observe project cards
         projectCards.forEach(card => {
+            observer.observe(card);
+        });
+        
+        // Observe certification cards
+        certificationCards.forEach(card => {
             observer.observe(card);
         });
         
