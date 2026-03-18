@@ -22,7 +22,6 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -34,7 +33,6 @@
             overflow-x: hidden;
         }
 
-        /* Grain overlay */
         body::before {
             content: '';
             position: fixed;
@@ -45,7 +43,6 @@
             opacity: 0.4;
         }
 
-        /* Ambient glow */
         .ambient {
             position: fixed;
             width: 600px;
@@ -58,7 +55,6 @@
             right: -100px;
         }
 
-        /* NAV */
         nav {
             position: fixed;
             top: 0; left: 0; right: 0;
@@ -73,20 +69,10 @@
             backdrop-filter: blur(16px);
         }
 
-        .nav-logo {
-            font-family: 'Instrument Serif', serif;
-            font-size: 1.2rem;
-            color: var(--text);
-            letter-spacing: 0.01em;
-        }
-
+        .nav-logo { font-family: 'Instrument Serif', serif; font-size: 1.2rem; color: var(--text); letter-spacing: 0.01em; }
         .nav-logo span { color: var(--gold); font-style: italic; }
 
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 36px;
-        }
+        .nav-links { display: flex; list-style: none; gap: 36px; }
 
         .nav-links a {
             font-size: 0.78rem;
@@ -100,16 +86,8 @@
 
         .nav-links a:hover { color: var(--gold); }
 
-        .mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text);
-            font-size: 1.3rem;
-            cursor: pointer;
-        }
+        .mobile-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.3rem; cursor: pointer; }
 
-        /* HERO */
         #home {
             min-height: 100vh;
             display: flex;
@@ -118,11 +96,7 @@
             position: relative;
         }
 
-        .hero-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            width: 100%;
-        }
+        .hero-inner { max-width: 1100px; margin: 0 auto; width: 100%; }
 
         .hero-eyebrow {
             font-family: 'JetBrains Mono', monospace;
@@ -145,10 +119,7 @@
             animation: fadeUp 0.7s 0.25s forwards;
         }
 
-        .hero-name em {
-            color: var(--gold);
-            font-style: italic;
-        }
+        .hero-name em { color: var(--gold); font-style: italic; }
 
         .hero-desc {
             font-size: 1.05rem;
@@ -201,11 +172,7 @@
             transition: border-color 0.2s, color 0.2s, transform 0.2s;
         }
 
-        .btn-ghost:hover {
-            border-color: var(--gold);
-            color: var(--gold);
-            transform: translateY(-2px);
-        }
+        .btn-ghost:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
 
         .hero-socials {
             display: flex;
@@ -215,25 +182,11 @@
             animation: fadeUp 0.7s 0.7s forwards;
         }
 
-        .hero-socials a {
-            font-size: 1rem;
-            color: var(--text-dim);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
+        .hero-socials a { font-size: 1rem; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
         .hero-socials a:hover { color: var(--gold); }
 
-        /* SECTIONS */
-        section:not(#home) {
-            padding: 120px 40px;
-            position: relative;
-        }
-
-        .section-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        section:not(#home) { padding: 120px 40px; position: relative; }
+        .section-inner { max-width: 1100px; margin: 0 auto; }
 
         .section-label {
             font-family: 'JetBrains Mono', monospace;
@@ -253,37 +206,13 @@
         }
 
         .section-heading em { font-style: italic; color: var(--gold); }
+        .divider { width: 100%; height: 1px; background: var(--border); }
 
-        /* divider */
-        .divider {
-            width: 100%;
-            height: 1px;
-            background: var(--border);
-        }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
 
-        /* ABOUT */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
-        }
-
-        .about-bio p {
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-size: 1rem;
-            line-height: 1.85;
-        }
-
-        .about-bio p:first-child {
-            color: var(--text);
-            font-size: 1.05rem;
-        }
-
+        .about-bio p { color: var(--text-muted); margin-bottom: 20px; font-size: 1rem; line-height: 1.85; }
+        .about-bio p:first-child { color: var(--text); font-size: 1.05rem; }
         .about-details { display: flex; flex-direction: column; gap: 32px; }
-
-        .detail-block {}
 
         .detail-label {
             font-family: 'JetBrains Mono', monospace;
@@ -294,14 +223,9 @@
             margin-bottom: 10px;
         }
 
-        .detail-value {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
+        .detail-value { font-size: 0.95rem; color: var(--text-muted); }
         .detail-value strong { color: var(--text); font-weight: 500; }
 
-        /* EDUCATION */
         .edu-list { display: flex; flex-direction: column; gap: 0; }
 
         .edu-item {
@@ -317,33 +241,11 @@
 
         .edu-item.visible { opacity: 1; transform: translateY(0); }
 
-        .edu-year {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.78rem;
-            color: var(--text-dim);
-            padding-top: 4px;
-        }
+        .edu-year { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-dim); padding-top: 4px; }
+        .edu-degree { font-family: 'Instrument Serif', serif; font-size: 1.3rem; color: var(--text); margin-bottom: 6px; }
+        .edu-institution { font-size: 0.9rem; color: var(--gold); margin-bottom: 10px; }
+        .edu-note { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
 
-        .edu-degree {
-            font-family: 'Instrument Serif', serif;
-            font-size: 1.3rem;
-            color: var(--text);
-            margin-bottom: 6px;
-        }
-
-        .edu-institution {
-            font-size: 0.9rem;
-            color: var(--gold);
-            margin-bottom: 10px;
-        }
-
-        .edu-note {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        /* PROJECTS */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -357,7 +259,6 @@
         .project-card {
             background: var(--surface);
             padding: 32px 28px;
-            transition: background 0.25s;
             opacity: 0;
             transform: translateY(16px);
             transition: opacity 0.5s, transform 0.5s, background 0.25s;
@@ -368,33 +269,10 @@
 
         .project-card.visible { opacity: 1; transform: translateY(0); }
         .project-card:hover { background: var(--surface-2); }
-
-        .project-icon {
-            font-size: 1rem;
-            color: var(--gold);
-            margin-bottom: 4px;
-        }
-
-        .project-name {
-            font-family: 'Instrument Serif', serif;
-            font-size: 1.15rem;
-            color: var(--text);
-            line-height: 1.3;
-        }
-
-        .project-desc {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            flex: 1;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 4px;
-        }
+        .project-icon { font-size: 1rem; color: var(--gold); margin-bottom: 4px; }
+        .project-name { font-family: 'Instrument Serif', serif; font-size: 1.15rem; color: var(--text); line-height: 1.3; }
+        .project-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; flex: 1; }
+        .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
 
         .tag {
             font-family: 'JetBrains Mono', monospace;
@@ -406,20 +284,9 @@
             letter-spacing: 0.04em;
         }
 
-        .project-course {
-            font-size: 0.75rem;
-            color: var(--text-dim);
-            font-style: italic;
-        }
+        .project-course { font-size: 0.75rem; color: var(--text-dim); font-style: italic; }
 
-        /* SKILLS */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px 80px;
-        }
-
-        .skill-group {}
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px 80px; }
 
         .skill-group-title {
             font-family: 'JetBrains Mono', monospace;
@@ -432,11 +299,7 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .skill-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
+        .skill-pills { display: flex; flex-wrap: wrap; gap: 8px; }
 
         .skill-pill {
             font-size: 0.85rem;
@@ -448,24 +311,15 @@
             transition: border-color 0.2s, color 0.2s;
         }
 
-        .skill-pill:hover {
-            border-color: var(--border-gold);
-            color: var(--text);
-        }
+        .skill-pill:hover { border-color: var(--border-gold); color: var(--text); }
 
-        /* INTERESTS */
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
+        .interests-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
         .interest-card {
             padding: 28px 24px;
             border: 1px solid var(--border);
             border-radius: 6px;
             background: var(--surface);
-            transition: border-color 0.25s;
             opacity: 0;
             transform: translateY(16px);
             transition: opacity 0.5s, transform 0.5s, border-color 0.25s;
@@ -473,27 +327,10 @@
 
         .interest-card.visible { opacity: 1; transform: translateY(0); }
         .interest-card:hover { border-color: var(--border-gold); }
+        .interest-icon { font-size: 1.4rem; color: var(--gold); margin-bottom: 14px; }
+        .interest-name { font-size: 0.95rem; font-weight: 500; color: var(--text); margin-bottom: 8px; }
+        .interest-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.65; }
 
-        .interest-icon {
-            font-size: 1.4rem;
-            color: var(--gold);
-            margin-bottom: 14px;
-        }
-
-        .interest-name {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text);
-            margin-bottom: 8px;
-        }
-
-        .interest-desc {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            line-height: 1.65;
-        }
-
-        /* ACTIVITIES */
         .activities-list { display: flex; flex-direction: column; gap: 0; }
 
         .activity-item {
@@ -517,20 +354,10 @@
             padding-top: 4px;
         }
 
-        .activity-role {
-            font-family: 'Instrument Serif', serif;
-            font-size: 1.2rem;
-            color: var(--text);
-            margin-bottom: 6px;
-        }
+        .activity-role { font-family: 'Instrument Serif', serif; font-size: 1.2rem; color: var(--text); margin-bottom: 6px; }
+        .activity-desc { font-size: 0.87rem; color: var(--text-muted); line-height: 1.7; }
+        .activity-date { font-size: 0.75rem; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; margin-top: 6px; }
 
-        .activity-desc {
-            font-size: 0.87rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
-        /* CERTIFICATIONS */
         .cert-card {
             display: flex;
             align-items: flex-start;
@@ -561,13 +388,7 @@
             flex-shrink: 0;
         }
 
-        .cert-title {
-            font-family: 'Instrument Serif', serif;
-            font-size: 1.2rem;
-            color: var(--text);
-            margin-bottom: 4px;
-        }
-
+        .cert-title { font-family: 'Instrument Serif', serif; font-size: 1.2rem; color: var(--text); margin-bottom: 4px; }
         .cert-issuer { font-size: 0.85rem; color: var(--gold); margin-bottom: 4px; }
         .cert-date { font-size: 0.8rem; color: var(--text-dim); margin-bottom: 14px; font-family: 'JetBrains Mono', monospace; }
 
@@ -585,21 +406,9 @@
 
         .cert-verify:hover { color: var(--gold); }
 
-        /* CONTACT */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
-        }
-
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
         .contact-info-block { display: flex; flex-direction: column; gap: 28px; }
-
-        .contact-line {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
+        .contact-line { display: flex; flex-direction: column; gap: 4px; }
 
         .contact-line-label {
             font-family: 'JetBrains Mono', monospace;
@@ -609,26 +418,12 @@
             color: var(--text-dim);
         }
 
-        .contact-line-value {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        .contact-line-value a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
+        .contact-line-value { font-size: 0.95rem; color: var(--text-muted); }
+        .contact-line-value a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
         .contact-line-value a:hover { color: var(--gold); }
 
         .contact-form { display: flex; flex-direction: column; gap: 16px; }
-
-        .form-field {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
+        .form-field { display: flex; flex-direction: column; gap: 6px; }
 
         .form-field label {
             font-family: 'JetBrains Mono', monospace;
@@ -638,8 +433,7 @@
             color: var(--text-dim);
         }
 
-        .form-field input,
-        .form-field textarea {
+        .form-field input, .form-field textarea {
             background: var(--surface);
             border: 1px solid var(--border);
             color: var(--text);
@@ -651,19 +445,10 @@
             resize: none;
         }
 
-        .form-field input:focus,
-        .form-field textarea:focus {
-            outline: none;
-            border-color: var(--border-gold);
-        }
-
+        .form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--border-gold); }
         .form-field textarea { height: 130px; }
 
-        /* FOOTER */
-        footer {
-            padding: 40px;
-            border-top: 1px solid var(--border);
-        }
+        footer { padding: 40px; border-top: 1px solid var(--border); }
 
         .footer-inner {
             max-width: 1100px;
@@ -675,25 +460,14 @@
             gap: 20px;
         }
 
-        .footer-name {
-            font-family: 'Instrument Serif', serif;
-            font-size: 1rem;
-            color: var(--text-muted);
-        }
+        .footer-name { font-family: 'Instrument Serif', serif; font-size: 1rem; color: var(--text-muted); }
+        .footer-copy { font-size: 0.78rem; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; }
 
-        .footer-copy {
-            font-size: 0.78rem;
-            color: var(--text-dim);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        /* ANIMATIONS */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* MOBILE */
         @media (max-width: 900px) {
             nav { padding: 0 24px; }
             .nav-links { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: rgba(10,10,10,0.97); padding: 32px 24px; gap: 24px; border-bottom: 1px solid var(--border); }
@@ -743,7 +517,7 @@
         <h1 class="hero-name">Abdullah<br><em>Basit Awan</em></h1>
         <p class="hero-desc">Focused on embedded systems and software development. Also interested in videography, photography, and 3D animation.</p>
         <div class="hero-actions">
-            <a href="Abdullah_Basit_CV_2026.pdf" class="btn-primary" download>
+            <a href="Abdullah_Basit_CV.pdf" class="btn-primary" download>
                 <i class="fas fa-download"></i> Download CV
             </a>
             <a href="#projects" class="btn-ghost">View Projects</a>
@@ -767,7 +541,7 @@
             <div class="about-bio">
                 <p>I am a Computer Engineering student at the Information Technology University, Lahore, currently in my third year of a four-year degree.</p>
                 <p>My primary interests are in embedded systems and software development. I enjoy working close to hardware, understanding how systems are designed, and building things that actually run on real devices.</p>
-                <p>Outside of engineering, I work in media production. I edit video content for IEEE Student Branch ITU and manage media and events for IET On Campus ITU. I also enjoy photography, 3D animation, gaming and following real-time tech news in my personal time.</p>
+                <p>Outside of engineering, I work in media production. I edit video content for IEEE Student Branch ITU and manage media and events for IET OnCampus ITU. I also enjoy photography, 3D animation, gaming and following real-time tech news in my personal time.</p>
             </div>
             <div class="about-details">
                 <div class="detail-block">
@@ -776,7 +550,7 @@
                 </div>
                 <div class="detail-block">
                     <div class="detail-label">Focus areas</div>
-                    <div class="detail-value">Embedded Systems &middot; Software Development<br>Game Development and Animation</div>
+                    <div class="detail-value">Embedded Systems &middot; Software Development</div>
                 </div>
                 <div class="detail-block">
                     <div class="detail-label">Creative interests</div>
@@ -804,7 +578,7 @@
                 <div>
                     <div class="edu-degree">BS Computer Engineering</div>
                     <div class="edu-institution">Information Technology University, Lahore</div>
-                    <div class="edu-note">Relevant coursework: Embedded Systems, Machine Learning, Software Engineering, Database &amp; Management Systems, Digital System Design, Computer Architecture &amp; Organization, Data Structures &amp; Algorithms, Microcontrollers &amp; Interfacing and Digital Logic Design</div>
+                    <div class="edu-note">Relevant coursework: Machine Learning, DBMS, Embedded Systems, Digital System Design, Computer Architecture &amp; Organization, Data Structures &amp; Algorithms, Microcontrollers &amp; Interfacing, Digital Logic Design</div>
                 </div>
             </div>
             <div class="edu-item">
@@ -833,67 +607,48 @@
         <p class="section-label">Projects</p>
         <h2 class="section-heading">Academic <em>work</em></h2>
         <div class="projects-grid">
-
             <div class="project-card">
                 <div class="project-icon"><i class="fas fa-microchip"></i></div>
                 <div class="project-name">Single-Cycle RISC-V Processor</div>
                 <div class="project-desc">Single-cycle datapath in Verilog supporting R, I, S, and B-type instructions, with instruction decode logic and a custom ALU.</div>
-                <div class="project-tags">
-                    <span class="tag">Verilog</span><span class="tag">RISC-V</span><span class="tag">Digital Design</span>
-                </div>
+                <div class="project-tags"><span class="tag">Verilog</span><span class="tag">RISC-V</span><span class="tag">Digital Design</span></div>
                 <div class="project-course">Computer Architecture &amp; Organization</div>
             </div>
-
             <div class="project-card">
                 <div class="project-icon"><i class="fas fa-th"></i></div>
-                <div class="project-name">2D Systolic Array for Convolution</div>
-                <div class="project-desc">Verilog implementation of a 2D systolic array supporting matrix convolution and multiplication for up to 5&times;5 matrices.</div>
-                <div class="project-tags">
-                    <span class="tag">Verilog</span><span class="tag">Systolic Array</span><span class="tag">Hardware Design</span>
-                </div>
+                <div class="project-name">RISC-V Based Hardware Accelerator</div>
+                <div class="project-desc">Verilog implementation of a 2D systolic array supporting matrix multiplication and convolution for up to 5&times;5 matrices.</div>
+                <div class="project-tags"><span class="tag">Verilog</span><span class="tag">Systolic Array</span><span class="tag">Hardware Design</span></div>
                 <div class="project-course">Digital System Design</div>
             </div>
-
             <div class="project-card">
                 <div class="project-icon"><i class="fas fa-calendar-check"></i></div>
                 <div class="project-name">Reservify</div>
                 <div class="project-desc">A web app for booking events and rides. Flask and Python backend, relational SQL database, HTML/CSS frontend.</div>
-                <div class="project-tags">
-                    <span class="tag">Flask</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span>
-                </div>
-                <div class="project-course">Databases</div>
+                <div class="project-tags"><span class="tag">Flask</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">HTML/CSS</span></div>
+                <div class="project-course">Database Management Systems</div>
             </div>
-
             <div class="project-card">
                 <div class="project-icon"><i class="fas fa-bluetooth-b"></i></div>
                 <div class="project-name">Bluetooth-Controlled Vehicle</div>
                 <div class="project-desc">STM32-based vehicle with wireless Bluetooth control using UART communication and PWM for motor speed and direction.</div>
-                <div class="project-tags">
-                    <span class="tag">STM32</span><span class="tag">UART</span><span class="tag">PWM</span><span class="tag">Embedded C</span>
-                </div>
+                <div class="project-tags"><span class="tag">STM32</span><span class="tag">UART</span><span class="tag">PWM</span><span class="tag">Embedded C</span></div>
                 <div class="project-course">Microcontrollers &amp; Interfacing</div>
             </div>
-
             <div class="project-card">
                 <div class="project-icon"><i class="fas fa-university"></i></div>
                 <div class="project-name">Banking System in C++</div>
                 <div class="project-desc">A basic bank management system built using a hash table, doubly linked list, queue, and stack.</div>
-                <div class="project-tags">
-                    <span class="tag">C++</span><span class="tag">DSA</span><span class="tag">Hash Table</span><span class="tag">Linked List</span>
-                </div>
+                <div class="project-tags"><span class="tag">C++</span><span class="tag">DSA</span><span class="tag">Hash Table</span><span class="tag">Linked List</span></div>
                 <div class="project-course">Data Structures &amp; Algorithms</div>
             </div>
-
             <div class="project-card">
                 <div class="project-icon"><i class="fas fa-robot"></i></div>
                 <div class="project-name">Line-Following / Obstacle-Avoidance Robot</div>
                 <div class="project-desc">Arduino-based robot using IR sensors for line following and an ultrasonic sensor for obstacle detection and avoidance.</div>
-                <div class="project-tags">
-                    <span class="tag">Arduino</span><span class="tag">IR Sensor</span><span class="tag">Ultrasonic</span>
-                </div>
+                <div class="project-tags"><span class="tag">Arduino</span><span class="tag">IR Sensor</span><span class="tag">Ultrasonic</span></div>
                 <div class="project-course">Electronics Workbench</div>
             </div>
-
         </div>
     </div>
 </section>
@@ -906,6 +661,15 @@
         <p class="section-label">Skills</p>
         <h2 class="section-heading">What I <em>work with</em></h2>
         <div class="skills-grid">
+            <div class="skill-group">
+                <div class="skill-group-title">Relevant Coursework</div>
+                <div class="skill-pills">
+                    <span class="skill-pill">Machine Learning</span>
+                    <span class="skill-pill">DBMS</span>
+                    <span class="skill-pill">Embedded Systems</span>
+                    <span class="skill-pill">Digital System Design</span>
+                </div>
+            </div>
             <div class="skill-group">
                 <div class="skill-group-title">Programming Languages</div>
                 <div class="skill-pills">
@@ -941,8 +705,18 @@
                     <span class="skill-pill">SolidWorks</span>
                     <span class="skill-pill">GitHub</span>
                     <span class="skill-pill">VSCode</span>
+                    <span class="skill-pill">STM CubeIDE</span>
+                    <span class="skill-pill">Arduino IDE</span>
                     <span class="skill-pill">Video Editing</span>
                     <span class="skill-pill">Photo Editing</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <div class="skill-group-title">Soft Skills</div>
+                <div class="skill-pills">
+                    <span class="skill-pill">Event Planning</span>
+                    <span class="skill-pill">Media Production</span>
+                    <span class="skill-pill">Technical Communication</span>
                 </div>
             </div>
         </div>
@@ -1000,17 +774,27 @@
         <h2 class="section-heading">On <em>campus</em></h2>
         <div class="activities-list">
             <div class="activity-item">
-                <div class="activity-org">IET On Campus<br>ITU Lahore</div>
+                <div class="activity-org">IET OnCampus<br>ITU Lahore</div>
                 <div>
                     <div class="activity-role">Media and Events Director</div>
-                    <div class="activity-desc">Managing media output and planning events for the IET student society chapter at Information Technology University.</div>
+                    <div class="activity-desc">Led media coverage and event planning for IET OnCampus ITU.</div>
+                    <div class="activity-date">Aug 2025 &ndash; Jun 2026</div>
                 </div>
             </div>
             <div class="activity-item">
                 <div class="activity-org">IEEE Student<br>Branch ITU</div>
                 <div>
                     <div class="activity-role">Video Editor</div>
-                    <div class="activity-desc">Producing and editing video content for the IEEE student branch at ITU.</div>
+                    <div class="activity-desc">Produced and edited promotional video content for IEEE Student Branch ITU.</div>
+                    <div class="activity-date">Aug 2025 &ndash; Jun 2026</div>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-org">IEEE WIE<br>SBAG ITU</div>
+                <div>
+                    <div class="activity-role">Publicity Member</div>
+                    <div class="activity-desc">Assisted in promoting events and increasing outreach for IEEE WIE SBAG ITU.</div>
+                    <div class="activity-date">Aug 2025 &ndash; Jun 2026</div>
                 </div>
             </div>
         </div>
@@ -1094,13 +878,11 @@
 </footer>
 
 <script>
-    // Mobile nav
     const toggle = document.getElementById('mobile-toggle');
     const navLinks = document.getElementById('nav-links');
     toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
     document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-    // Scroll reveal
     const revealEls = document.querySelectorAll('.edu-item, .project-card, .interest-card, .activity-item, .cert-card');
     const io = new IntersectionObserver((entries) => {
         entries.forEach((e, i) => {
@@ -1112,28 +894,25 @@
     }, { threshold: 0.08 });
     revealEls.forEach(el => io.observe(el));
 
-    // Stagger siblings
     document.querySelectorAll('.projects-grid, .interests-grid, .activities-list, .edu-list').forEach(container => {
         [...container.children].forEach((child, i) => {
             child.style.transitionDelay = `${i * 60}ms`;
         });
     });
 
-    // Ambient glow follows mouse
     const ambient = document.querySelector('.ambient');
     document.addEventListener('mousemove', e => {
         ambient.style.left = (e.clientX - 300) + 'px';
         ambient.style.top = (e.clientY - 300) + 'px';
     });
 
-    // Contact form
     document.getElementById('contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
         const btn = this.querySelector('button[type="submit"]');
         btn.textContent = 'Sent!';
         btn.style.opacity = '0.6';
         setTimeout(() => { btn.textContent = 'Send Message'; btn.style.opacity = '1'; this.reset(); }, 2500);
-        alert('Thanks for reaching out! Since this is a static site, please email me directly at abdullah.basit24@outlook.com. Cheers! :)');
+        alert('Thanks for reaching out! Since this is a static site, please email me directly at abdullah.basit24@outlook.com');
     });
 </script>
 </body>
